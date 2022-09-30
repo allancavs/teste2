@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function jumpLine() {
+
+        document.write("<br><br>");
+
+    }
+
+    function show(speak) {
+
+        document.write(speak);
+        jumpLine();
+
+    }
+
+    function imcTotal(weight, height) {
+
+        var imc = weight / (height * height);
+        return imc;
+
+    }
+
+    var name = prompt("Qual seu nome?");
+    var weight = prompt(name + ", qual seu peso?");
+    var height = prompt(name + ", qual sua altura?");
+
+    var imc = imcTotal(weight, height);
+
+    show("Seu imc é " + Math.round(imc));
+
+    if(imc < 18.5) {
+
+        show("Está magrelo em");
+
+    }
+
+    if(imc > 18.5 && imc < 24.9) {
+
+        show("Você está uma delícia");
+
+    }
+
+    if(imc > 25 && imc < 29.9) {
+
+        show("Você está Free Willy, quiquiqui.");
+
+    }
+
+    alert("Aguarde estou calculando ..");
+
+</script>
